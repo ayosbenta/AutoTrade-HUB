@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoRev Dealership OS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'background': 'var(--color-background)',
+            'sidebar': 'var(--color-sidebar)',
+            'card': 'var(--color-card)',
+            'card-border': 'var(--color-card-border)',
+            'primary': '#3b82f6',    // Blue 500
+            'text-primary': 'var(--color-text-primary)',
+            'text-secondary': 'var(--color-text-secondary)',
+          },
+        },
+      },
+       plugins: [],
+    }
+  </script>
+    <style>
+        :root {
+            --color-background: #f3f4f6; /* Gray 100 */
+            --color-sidebar: #ffffff;
+            --color-card: #ffffff;
+            --color-card-border: #e5e7eb; /* Gray 200 */
+            --color-text-primary: #111827; /* Gray 900 */
+            --color-text-secondary: #6b7280; /* Gray 500 */
+        }
+
+        .dark {
+            --color-background: #111827; /* Gray 900 */
+            --color-sidebar: #1f2937;    /* Gray 800 */
+            --color-card: #1f2937;       /* Gray 800 */
+            --color-card-border: #374151;/* Gray 700 */
+            --color-text-primary: #f9fafb; /* Gray 50 */
+            --color-text-secondary: #9ca3af; /* Gray 400 */
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-background);
+            color: var(--color-text-primary);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "recharts": "https://aistudiocdn.com/recharts@^3.3.0"
+      }
+    }
+    </script>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
